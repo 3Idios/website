@@ -3,36 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/music_player.css">
     <title>Web Music Player</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .music-player {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            width: 300px;
-        }
-        .music-player h1 {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        audio {
-            width: 100%;
-            margin-top: 10px;
-        }
-    </style>
 </head>
+<header>
+    <button onclick="window.location.href='../index.html'" class="home-button">
+        <img src="../assets/icons/home.svg" alt="Home" class="home-icon">
+    </button>
+</header>
 <body>
     <div class="music-player">
         <h1>Web Music Player</h1>
