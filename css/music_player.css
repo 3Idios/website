@@ -46,7 +46,7 @@ header {
 
 .home-button:hover {
     background-color: #357ab7;
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 
 .home-button img {

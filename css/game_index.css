@@ -9,11 +9,13 @@ canvas {
 }
 #score {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
+    top: 77px;
+    left: 50%;
+    width: 150px; /* Set a fixed width or use `max-width` */
+    font-size: 33px;
     font-weight: bold;
     color: #333;
+    margin-left: -75px; /* Half of the width value */
 }
 
 .home-button {
@@ -31,7 +33,7 @@ canvas {
 
 .home-button:hover {
     background-color: #357ab7;
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 
 .home-button img {
@@ -40,12 +42,37 @@ canvas {
     height: 40px;
 }
 
-#score {
-    position: relative;
-    margin-top: 70px;
-}
-
 #gameCanvas {
     position: relative;
-    margin-top: 30px;
+    margin-top: 150px;
+}
+
+.replay-button {
+    display: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+
+    align-items: center;
+
+    font-size: 1.2rem;
+    padding: 20px 80px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.replay-button:hover {
+    background-color: #357ab7;
+    /*transform: scale(1.05);*/
+}
+
+.replay-button img {
+    margin-right: 8px; /* Space between the icon and text */
+    width: 60px; /* Adjust icon size */
+    height: 60px;
 }

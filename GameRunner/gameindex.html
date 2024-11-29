@@ -15,6 +15,10 @@
     <div id="score">Score: 0</div>
     <canvas id="gameCanvas"></canvas>
 
+    <button id="replayButton" class="replay-button" onclick="restartGame()">
+        <img src="../assets/icons/replay.svg" alt="Replay" class="replay-icon">
+    </button>
+
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
@@ -88,6 +92,9 @@
                 ) {
                     gameOver = true;
                     alert(`Game Over! Your Score: ${score}`);
+
+                    // Show replay button when the game ends
+                    document.getElementById('replayButton').style.display = 'block';
                 }
 
                 // Request the next animation frame
@@ -103,6 +110,23 @@
                 player.grounded = false; // Set grounded to false
             }
         });
+
+        function restartGame() {
+            player.y = canvas.height - 50;
+            player.dy = 0;
+            player.grounded = true;
+
+            obstacle.x = canvas.width;
+            score = 0;
+            document.getElementById('score').innerText = `Score: ${score}`;
+
+            gameOver = false;
+
+            // Hide replay button
+            document.getElementById('replayButton').style.display = 'none';
+
+            update();
+        }
 
         // Start the game loop
         update();
